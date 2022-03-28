@@ -1,4 +1,8 @@
 class Movie < ApplicationRecord
+  belongs_to :movie
+  
+  
+  
   def index
     movies = Movie.all
     render json: movies.as_json

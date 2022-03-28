@@ -1,4 +1,7 @@
 class Actor < ApplicationRecord
+  has_many :actors
+  
+  
   def index
     actor = Actor.all
     render json: actor.as_json
